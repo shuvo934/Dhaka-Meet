@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homepage.Homepage">
+
+    <LinearLayout
+        android:id="@+id/homepage_full_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/red_dhaka">
+
+        <RelativeLayout
+            android:id="@+id/app_bar_homepage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red_dhaka"
+            android:padding="@dimen/_11sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:id="@+id/dhaka_meet_logo"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dhaka_meet_logo"
+                android:layout_alignParentStart="true"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_toEndOf="@id/dhaka_meet_logo"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="@dimen/_1sdp"
+                android:paddingBottom="0dp"
+                android:text="Dhaka Meet 2024"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/month_view_selection_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="3dp"
+            android:background="@color/white"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/date_of_today"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:fontFamily="@font/poppins_bold"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_11sdp"/>
+
+                    <TextClock
+                        android:id="@+id/text_clock_give_att"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_bold"
+                        android:format12Hour="hh:mm:ss a"
+                        android:format24Hour="hh:mm:ss a"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:textColor="#576574"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lunch_qr_scanner_dm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lunch VERIFICATION"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="@dimen/_14sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        app:cornerRadius="@dimen/_14sdp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/dinner_qr_scanner_dm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dinner VERIFICATION"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="@dimen/_14sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        app:cornerRadius="@dimen/_14sdp"/>
+
+                    <TextView
+                        android:id="@+id/qr_button_missing_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:fontFamily="@font/poppins_bold"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_11sdp"
+                        android:layout_marginTop="@dimen/_11sdp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_indicator_doc_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>

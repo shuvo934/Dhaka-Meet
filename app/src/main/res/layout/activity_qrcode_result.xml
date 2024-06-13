@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".qrscanner.QRCodeResult">
+
+
+    <LinearLayout
+        android:id="@+id/qr_result_full_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/verified_icon"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_44sdp"
+            android:src="@drawable/yes_icon" />
+
+        <ImageView
+            android:id="@+id/warning_icon"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_44sdp"
+            android:src="@drawable/warning_icon" />
+
+        <TextView
+            android:id="@+id/item_verified_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunch Verified"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_18sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="for"
+            android:textSize="@dimen/_11sdp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:elevation="12dp"
+            app:cardCornerRadius="@dimen/_70sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/doc_profile_image"
+                android:layout_width="@dimen/_118sdp"
+                android:layout_height="@dimen/_118sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/doctor"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/red_dhaka"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/visitor_profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result_text_from_scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text=""
+        android:textSize="@dimen/_11sdp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/done_button_for_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cornerRadius="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingBottom="@dimen/_1sdp"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"/>
+
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_indicator_qr_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:layout_gravity="center"/>
+
+
+</RelativeLayout>
